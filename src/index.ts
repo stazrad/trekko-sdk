@@ -1,4 +1,4 @@
-import iframeResizer from 'iframe-resizer'
+import * as iframeResizer from 'iframe-resizer'
 import { WidgetConfig } from './types'
 
 export function init () {
@@ -17,7 +17,7 @@ init()
 export function embed (config: WidgetConfig, element: Element) {
   element.innerHTML = ''
 
-  const url = `https://trekko.app/widget/trail-list?organizationId=${config.organizationId}`
+  const url = `http://localhost:3000/widget/trail-list?organizationId=${config.organizationId}`
   const style = `display:block;width:100%;border:0px;background-color:black;`
   const iframe = document.createElement('iframe')
 
@@ -25,5 +25,5 @@ export function embed (config: WidgetConfig, element: Element) {
   iframe.setAttribute('style', style)
 
   element.appendChild(iframe)
-  iframeResizer({}, iframe)
+  iframeResizer.iframeResizer({log:true}, iframe)
 }
