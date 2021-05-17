@@ -15,7 +15,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'sdk.js',
+    filename: 'widget.js',
     path: path.resolve(__dirname, 'build'),
   },
 }
