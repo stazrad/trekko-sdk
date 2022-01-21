@@ -17,7 +17,7 @@ init()
 export function embed (config: WidgetConfig, element: Element) {
   element.innerHTML = ''
 
-  const url = `https://web.trekko.app/widget/trail-list?organizationId=${config.organizationId}&host=${window.location.href}`
+  const url = `https://widget.trekko.app/widget/trail-list?organizationId=${config.organizationId}&host=${window.location.href}`
   const style = `display:block;width:100%;border:0px;background-color:black;`
   const iframe = document.createElement('iframe')
 
